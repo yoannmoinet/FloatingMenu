@@ -5,6 +5,7 @@ tmp/
 logs/
 log/
 results/
+.sass-cache/
 
 *.seed
 *.log
