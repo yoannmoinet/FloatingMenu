@@ -1,57 +1,114 @@
+var mountFolder = function (connect, dir) {
+	return connect.static(require('path').resolve(dir));
+};
 module.exports = function(grunt) {
 
-  grunt.initConfig({
+	grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
+		pkg: grunt.file.readJSON('package.json'),
 
-    concat: {
+		concat: {
+			options: {
+				separator: "\n\n"
+			},
+			dist: {
+				src: [
+					'src/main.js'
+				],
+				dest: 'dist/<%= pkg.name.replace(".js", "") %>.js'
+			}
+		},
+
+		connect: {
       options: {
-        separator: "\n\n"
+        port: 9001,
+				hostname: 'localhost'
       },
-      dist: {
-        src: [
-          'src/main.js'
-        ],
-        dest: 'dist/<%= pkg.name.replace(".js", "") %>.js'
-      }
+		  dev: {
+		    options: {
+		      middleware: function (connect) {
+		        return [
+		          require('connect-livereload')(),
+		          mountFolder(connect, './')
+		        ];
+		      }
+		    }
+		  }
+	  },
+
+	  open : {
+	  	dev:{
+	    	path: 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/demo'
+	  	}
     },
 
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name.replace(".js", "") %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+		uglify: {
+			options: {
+				banner: '/*! <%= pkg.name.replace(".js", "") %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+			},
+			dist: {
+				files: {
+					'dist/<%= pkg.name.replace(".js", "") %>.min.js': ['<%= concat.dist.dest %>']
+				}
+			}
+		},
+
+		compass: {
+			dev: {
+				options: {
+					sassDir: 'demo/assets/sass',
+					cssDir: 'demo/assets',
+					watch: true
+				}
+			},
+			dist: {
+				options: {
+					sassDir: 'demo/assets/sass',
+					cssDir: 'demo/assets'
+				}
+			}
+		},
+
+		jshint: {
+			files: ['dist/FloatingMenu.js'],
+			options: {
+				globals: {
+					console: true,
+					module: true,
+					document: true
+				},
+				jshintrc: '.jshintrc'
+			}
+		},
+
+		watch: {
+			sass: {
+          files: ['**/sass/*.scss'],
+          tasks: ['compass:dist'],
+          options: {
+						livereload: true
+          }
       },
-      dist: {
-        files: {
-          'dist/<%= pkg.name.replace(".js", "") %>.min.js': ['<%= concat.dist.dest %>']
-        }
-      }
-    },
+      others:{
+				files: ['*/**.js', '*/**.html'],
+				tasks: ['concat'],
+				options: {
+					livereload: true
+				}
+			}
+		}
 
-    jshint: {
-      files: ['dist/FloatingMenu.js'],
-      options: {
-        globals: {
-          console: true,
-          module: true,
-          document: true
-        },
-        jshintrc: '.jshintrc'
-      }
-    },
+	});
 
-    watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['concat', 'jshint']
-    }
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-open');
 
-  });
-
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-
-  grunt.registerTask('test', ['jshint']);
-  grunt.registerTask('default', ['concat', 'jshint', 'uglify']);
+	grunt.registerTask('serve', ['connect:dev', 'open', 'watch']);
+	grunt.registerTask('default', ['concat', 'jshint', 'uglify', 'compass']);
 
 };

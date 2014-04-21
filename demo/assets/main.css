@@ -1,20 +1,7 @@
-/* Styles for FloatingMenu demo
- *
- * Author: Yoann Moinet
- */
-
-/* === resets === */
-
-/* === defaults === */
-
-/* === generic styles */
-
-/* === layout === */
-
-/* === modules === */
-
-/* === specific styles */
-
-/* === subsections === */
-
-/* === hacks / overrides === */
+/* line 1, sass/main.scss */
+body {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #eee;
+}
