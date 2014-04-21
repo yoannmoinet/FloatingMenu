@@ -1,0 +1,12 @@
+{
+  "name": "FloatingMenu",
+  "version": "0.0.1",
+  "main": "dist/FloatingMenu.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {}
+}
