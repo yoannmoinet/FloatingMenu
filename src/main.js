@@ -1,6 +1,39 @@
 (function(root, undefined){
 	"use strict";
-	// Base function.
+
+	var v = '0.0.1';
+
+	//Centralisation of each instance via a manager.
+	var FloatingManager = function(options){
+		var self = this,
+				fp = FloatingMenu.prototype;
+
+		self.add = function(options){
+			return new FloatingMenu(options);
+		};
+
+		self.get = function(){
+			return fp.get('all');
+		};
+
+		//DESTROY EVERYTHING !
+		self.destroy = function(){
+			var all = fp.get('all');
+			for(var i = 0, max = all.length; i < max; i += 1){
+				all[i].destroy();
+			}
+			self.add = self.get = self = fp = null;
+		};
+
+
+		//If we have options, we instanciate our first floater.
+		if(options !== undefined){
+			self.add(options);
+		}
+
+		return self;
+	};
+
 	var FloatingMenu = function(options) {
 		return _init(options,this);
 	};
@@ -83,14 +116,14 @@
 	};
 
 
-	//Setting the prototype.
+	//Set the prototype.
 	FloatingMenu.prototype.set = function( key, value ) {
 		var self = FloatingMenu.prototype;
 		self[key] = value;
 		return self;
 	};
 
-	//Getting the prototype.
+	//Get the prototype.
 	FloatingMenu.prototype.get = function(key){
 		var self = FloatingMenu.prototype;
 		return self[key];
@@ -100,16 +133,24 @@
 	FloatingMenu.prototype.destroy = function() {
 		var self = this,
 			all = self.get("all").splice(self._ind,1); //Removing it from the all array.
+
+		//Reindexing all instances.
+		for(var i = 0, max = all.length; i < max; i += 1){
+			all[i]._ind = i;
+		}
+
+		//Overwriting old array.
 		self.set("all",all);
+
 		self.unbind();
 		self = null;
 	};
 
 
 	// Version.
-	FloatingMenu.VERSION = '0.0.1';
+	FloatingManager.VERSION = v;
 
 	// Export to the root, which is probably `window`.
-	root.FloatingMenu = FloatingMenu;
+	root.FloatingMenu = FloatingManager;
 
 })(this);

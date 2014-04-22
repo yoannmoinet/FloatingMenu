@@ -126,9 +126,10 @@
       }
 
       //Instantiate library.
-      var n = new FloatingMenu({
-
+      var floatMenu = new FloatingMenu({
+        container: document.getElementsByTagName('body')[0]
       });
+      console.log(floatMenu);
     </script>
   </body>
 </html>
