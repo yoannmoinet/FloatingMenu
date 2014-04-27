@@ -90,7 +90,7 @@ module.exports = function(grunt) {
           }
       },
       others:{
-				files: ['*/**.js', '*/**.html'],
+				files: ['./src/*.js', '*/**.html'],
 				tasks: ['concat'],
 				options: {
 					livereload: true

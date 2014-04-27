@@ -1,135 +1,151 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FloatingMenu demo</title>
-    <link rel="stylesheet" href="./assets/normalize.css" />
-    <link rel="stylesheet" href="./assets/main.css" />
-  </head>
-  <body>
-    <h1>FloatingMenu demo</h1>
-    <div class="description">
-      <p><strong>FloatingMenu</strong> lets you make an element float alongside another one. The element will follow the scroll if it's smaller than its <em>allowed</em> area, and it will scroll if it's bigger.</p>
-      <p class='small'>See the <a href="http://yoannmoinet.github.io/FloatingMenu">project homepage</a>. Check out the <a href="https://github.com/yoannmoinet/FloatingMenu">project repo</a>.</p>
-    </div>
+	<head>
+		<title>FloatingMenu demo</title>
+		<link rel="stylesheet" href="./assets/normalize.css" />
+		<link rel="stylesheet" href="./assets/main.css" />
+	</head>
+	<body>
+		<h1>FloatingMenu demo</h1>
+		<div class="description">
+			<p><strong>FloatingMenu</strong> lets you make an element float alongside another one. The element will follow the scroll if it's smaller than its <em>allowed</em> area, and it will scroll if it's bigger.</p>
+			<p class='small'>See the <a href="http://yoannmoinet.github.io/FloatingMenu">project homepage</a>. Check out the <a href="https://github.com/yoannmoinet/FloatingMenu">project repo</a>.</p>
+		</div>
 
-    <div id="demo">
-      <div class="contain">
-        <div class="left menu">
-          <h3>A small element will just follow the scroll</h3>
-        </div>
-        <div class="right content"><h3>Lorem ipsum dolor sit amet.</h3>
-        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nisi, possimus, eius porro nostrum commodi et animi neque perferendis incidunt tempora veritatis laudantium placeat vitae dolores ipsum aliquam suscipit ducimus!</em>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quidem maiores accusamus fugit rem dolores esse. Nam, quibusdam porro voluptatum? Accusamus, ab, laborum voluptate blanditiis minima alias est deserunt minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, unde, nam corporis fugiat dolor perferendis itaque iste sapiente id dolore explicabo libero aspernatur illo a ut corrupti eius. Veritatis, provident!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        </div>
-      </div>
-      <div class="contain">
-        <div class="left menu"><h3>A longer one will also scroll when needed.</h3>
-        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, voluptatibus, obcaecati, deleniti dolorum autem totam quasi ex officiis doloremque exercitationem eligendi consequatur praesentium repellendus! Sint, assumenda voluptates et incidunt.</em>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p></div>
-        <div class="right content"><h3>Lorem ipsum dolor sit amet.</h3>
-        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, maiores, reiciendis similique nesciunt sed sit ea! Eum, nam, praesentium, aliquam eveniet iste necessitatibus quibusdam obcaecati quam inventore accusantium esse nihil.</em>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        </div>
-      </div>
-      <div class="contain">
-        <div class="left menu"><h3>One smaller, but with dynamic height</h3>
-        <ul>
-          <li>
-            <p>Lorem ipsum.</p>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, aperiam, rem nisi ex cumque quam itaque esse. Aperiam, est, ipsam, id, repudiandae inventore adipisci reprehenderit minus tenetur vel corrupti optio.</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, aperiam, rem nisi ex cumque quam itaque esse. Aperiam, est, ipsam, id, repudiandae inventore adipisci reprehenderit minus tenetur vel corrupti optio.</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, aperiam, rem nisi ex cumque quam itaque esse. Aperiam, est, ipsam, id, repudiandae inventore adipisci reprehenderit minus tenetur vel corrupti optio.</span>
-          </li>
-          <li>
-            <p>Lorem ipsum.</p>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, voluptate vel doloremque nam repellendus dicta nostrum ratione officiis sit autem aliquam maxime sed iure officia amet distinctio adipisci! Alias, numquam!</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, voluptate vel doloremque nam repellendus dicta nostrum ratione officiis sit autem aliquam maxime sed iure officia amet distinctio adipisci! Alias, numquam!</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, voluptate vel doloremque nam repellendus dicta nostrum ratione officiis sit autem aliquam maxime sed iure officia amet distinctio adipisci! Alias, numquam!</span>
-          </li>
-          <li>
-            <p>Lorem ipsum.</p>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, deleniti, explicabo officia eius eaque molestiae beatae molestias praesentium nemo nostrum. Consectetur, voluptatem, obcaecati repellat perferendis a et eum pariatur esse!</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, deleniti, explicabo officia eius eaque molestiae beatae molestias praesentium nemo nostrum. Consectetur, voluptatem, obcaecati repellat perferendis a et eum pariatur esse!</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, deleniti, explicabo officia eius eaque molestiae beatae molestias praesentium nemo nostrum. Consectetur, voluptatem, obcaecati repellat perferendis a et eum pariatur esse!</span>
-          </li>
-          <li>
-            <p>Lorem ipsum.</p>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil culpa assumenda rerum quo veniam beatae repellendus non ex quae quia. Voluptate, reiciendis ratione vel molestias provident odio neque rerum error.</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil culpa assumenda rerum quo veniam beatae repellendus non ex quae quia. Voluptate, reiciendis ratione vel molestias provident odio neque rerum error.</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil culpa assumenda rerum quo veniam beatae repellendus non ex quae quia. Voluptate, reiciendis ratione vel molestias provident odio neque rerum error.</span>
-          </li>
-          <li>
-            <p>Lorem ipsum.</p>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error odit illum molestiae voluptatibus! Maxime, maiores, magnam, ratione voluptas dolores fuga voluptatibus amet animi accusamus tenetur quisquam minus ipsum sunt placeat.</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error odit illum molestiae voluptatibus! Maxime, maiores, magnam, ratione voluptas dolores fuga voluptatibus amet animi accusamus tenetur quisquam minus ipsum sunt placeat.</span>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error odit illum molestiae voluptatibus! Maxime, maiores, magnam, ratione voluptas dolores fuga voluptatibus amet animi accusamus tenetur quisquam minus ipsum sunt placeat.</span>
-          </li>
-        </ul></div>
-        <div class="left_right menu"><h3>One longer</h3>
-        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, voluptatibus, obcaecati, deleniti dolorum autem totam quasi ex officiis doloremque exercitationem eligendi consequatur praesentium repellendus! Sint, assumenda voluptates et incidunt.</em>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p></div>
-        <div class="right content"><h3>Lorem ipsum dolor sit amet.</h3>
-        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, voluptatibus, obcaecati, deleniti dolorum autem totam quasi ex officiis doloremque exercitationem eligendi consequatur praesentium repellendus! Sint, assumenda voluptates et incidunt.</em>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, dicta, id, quam, eaque repellendus exercitationem quia modi laudantium natus vitae ipsum minima ut libero ea tempora tenetur ullam recusandae sunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quo, animi voluptas eveniet eligendi quos hic culpa provident eius laudantium ea officia esse perspiciatis deleniti officiis vero voluptatem beatae consectetur?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <h3>Lorem ipsum dolor sit amet.</h3>
-        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fuga, sit, eveniet optio harum voluptate reiciendis quisquam rem libero vitae non quibusdam sapiente repellendus placeat eum ipsam unde ipsum voluptates.</em>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, architecto, dolorum maxime adipisci nemo incidunt quasi nostrum. Accusamus, mollitia, tempora, assumenda iure explicabo ipsum possimus molestiae consequuntur excepturi a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, temporibus, autem maxime eaque enim ipsam repellendus suscipit rem maiores rerum officia molestias iste fugiat voluptates quis aperiam voluptatum earum magnam.spernatur provident!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
-        </div>
-      </div>
-    </div>
+		<div id="demo">
+			<div class="contain">
+				<div class="left menu">
+					<h3>A small element will just follow the scroll</h3>
+				</div>
+				<div class="right content"><h3>Lorem ipsum dolor sit amet.</h3>
+				<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nisi, possimus, eius porro nostrum commodi et animi neque perferendis incidunt tempora veritatis laudantium placeat vitae dolores ipsum aliquam suscipit ducimus!</em>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quidem maiores accusamus fugit rem dolores esse. Nam, quibusdam porro voluptatum? Accusamus, ab, laborum voluptate blanditiis minima alias est deserunt minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, unde, nam corporis fugiat dolor perferendis itaque iste sapiente id dolore explicabo libero aspernatur illo a ut corrupti eius. Veritatis, provident!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				</div>
+			</div>
+			<div class="contain">
+				<div class="left menu"><h3>A longer one will also scroll when needed.</h3>
+				<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, voluptatibus, obcaecati, deleniti dolorum autem totam quasi ex officiis doloremque exercitationem eligendi consequatur praesentium repellendus! Sint, assumenda voluptates et incidunt.</em>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p></div>
+				<div class="right content"><h3>Lorem ipsum dolor sit amet.</h3>
+				<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, maiores, reiciendis similique nesciunt sed sit ea! Eum, nam, praesentium, aliquam eveniet iste necessitatibus quibusdam obcaecati quam inventore accusantium esse nihil.</em>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				</div>
+			</div>
+			<div class="contain">
+				<div class="left menu"><h3>One smaller, but with dynamic height</h3>
+				<ul>
+					<li>
+						<p>Lorem ipsum.</p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, aperiam, rem nisi ex cumque quam itaque esse. Aperiam, est, ipsam, id, repudiandae inventore adipisci reprehenderit minus tenetur vel corrupti optio.</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, aperiam, rem nisi ex cumque quam itaque esse. Aperiam, est, ipsam, id, repudiandae inventore adipisci reprehenderit minus tenetur vel corrupti optio.</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, aperiam, rem nisi ex cumque quam itaque esse. Aperiam, est, ipsam, id, repudiandae inventore adipisci reprehenderit minus tenetur vel corrupti optio.</span>
+					</li>
+					<li>
+						<p>Lorem ipsum.</p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, voluptate vel doloremque nam repellendus dicta nostrum ratione officiis sit autem aliquam maxime sed iure officia amet distinctio adipisci! Alias, numquam!</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, voluptate vel doloremque nam repellendus dicta nostrum ratione officiis sit autem aliquam maxime sed iure officia amet distinctio adipisci! Alias, numquam!</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, voluptate vel doloremque nam repellendus dicta nostrum ratione officiis sit autem aliquam maxime sed iure officia amet distinctio adipisci! Alias, numquam!</span>
+					</li>
+					<li>
+						<p>Lorem ipsum.</p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, deleniti, explicabo officia eius eaque molestiae beatae molestias praesentium nemo nostrum. Consectetur, voluptatem, obcaecati repellat perferendis a et eum pariatur esse!</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, deleniti, explicabo officia eius eaque molestiae beatae molestias praesentium nemo nostrum. Consectetur, voluptatem, obcaecati repellat perferendis a et eum pariatur esse!</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, deleniti, explicabo officia eius eaque molestiae beatae molestias praesentium nemo nostrum. Consectetur, voluptatem, obcaecati repellat perferendis a et eum pariatur esse!</span>
+					</li>
+					<li>
+						<p>Lorem ipsum.</p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil culpa assumenda rerum quo veniam beatae repellendus non ex quae quia. Voluptate, reiciendis ratione vel molestias provident odio neque rerum error.</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil culpa assumenda rerum quo veniam beatae repellendus non ex quae quia. Voluptate, reiciendis ratione vel molestias provident odio neque rerum error.</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil culpa assumenda rerum quo veniam beatae repellendus non ex quae quia. Voluptate, reiciendis ratione vel molestias provident odio neque rerum error.</span>
+					</li>
+					<li>
+						<p>Lorem ipsum.</p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error odit illum molestiae voluptatibus! Maxime, maiores, magnam, ratione voluptas dolores fuga voluptatibus amet animi accusamus tenetur quisquam minus ipsum sunt placeat.</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error odit illum molestiae voluptatibus! Maxime, maiores, magnam, ratione voluptas dolores fuga voluptatibus amet animi accusamus tenetur quisquam minus ipsum sunt placeat.</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error odit illum molestiae voluptatibus! Maxime, maiores, magnam, ratione voluptas dolores fuga voluptatibus amet animi accusamus tenetur quisquam minus ipsum sunt placeat.</span>
+					</li>
+				</ul></div>
+				<div class="left_right menu"><h3>One longer</h3>
+				<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, voluptatibus, obcaecati, deleniti dolorum autem totam quasi ex officiis doloremque exercitationem eligendi consequatur praesentium repellendus! Sint, assumenda voluptates et incidunt.</em>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p></div>
+				<div class="right content"><h3>Lorem ipsum dolor sit amet.</h3>
+				<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, voluptatibus, obcaecati, deleniti dolorum autem totam quasi ex officiis doloremque exercitationem eligendi consequatur praesentium repellendus! Sint, assumenda voluptates et incidunt.</em>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, dicta, id, quam, eaque repellendus exercitationem quia modi laudantium natus vitae ipsum minima ut libero ea tempora tenetur ullam recusandae sunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quo, animi voluptas eveniet eligendi quos hic culpa provident eius laudantium ea officia esse perspiciatis deleniti officiis vero voluptatem beatae consectetur?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<h3>Lorem ipsum dolor sit amet.</h3>
+				<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fuga, sit, eveniet optio harum voluptate reiciendis quisquam rem libero vitae non quibusdam sapiente repellendus placeat eum ipsam unde ipsum voluptates.</em>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, architecto, dolorum maxime adipisci nemo incidunt quasi nostrum. Accusamus, mollitia, tempora, assumenda iure explicabo ipsum possimus molestiae consequuntur excepturi a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, temporibus, autem maxime eaque enim ipsam repellendus suscipit rem maiores rerum officia molestias iste fugiat voluptates quis aperiam voluptatum earum magnam.spernatur provident!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quidem explicabo accusantium vitae doloremque tenetur non esse nihil a ipsam incidunt itaque ullam dolore nobis iure quo architecto fuga fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorem, autem, blanditiis, voluptates aspernatur ad dolore totam facere aliquam culpa reiciendis debitis quae voluptatibus mollitia omnis veritatis eaque incidunt veniam.</p>
+				</div>
+			</div>
+		</div>
 
-    <script src="../dist/FloatingMenu.js"></script>
+		<script src="../dist/FloatingMenu.js"></script>
 
-    <script>
-      //Accordeon
-      var li = document.getElementsByTagName('li');
-      for(var i = 0, max = li.length; i < max; i+=1){
-        if(li[i].addEventListener)
-          li[i].addEventListener('click', clickHandler);
-        else if(li[i].attachEvent)
-          li[i].attachEvent('click', clickHandler);
-      }
+		<script>
+			//Accordeon
+			var li = document.getElementsByTagName('li');
+			for(var i = 0, max = li.length; i < max; i+=1){
+				if(li[i].addEventListener)
+					li[i].addEventListener('click', clickHandler);
+				else if(li[i].attachEvent)
+					li[i].attachEvent('click', clickHandler);
+			}
 
-      function clickHandler(evt){
-        var el = evt.currentTarget;
-        if(el.className.indexOf('open') !== -1){
-          el.className = '';
-        } else {
-          el.className = 'open';
-        }
-      }
+			function clickHandler(evt){
+				var el = evt.currentTarget;
+				if(el.className.indexOf('open') !== -1){
+					el.className = '';
+				} else {
+					el.className = 'open';
+				}
+			}
 
-      //Instantiate library.
-      var floatMenu = new FloatingMenu({
-        container: document.getElementsByTagName('body')[0]
-      });
-      console.log(floatMenu);
-    </script>
-  </body>
+			//Instantiate library.
+			var menus = [];
+			var menusEls = document.querySelectorAll('.menu');
+
+			//Getting all our menus and constrains.
+			for(var i = 0, max = menusEls.length; i < max; i += 1){
+				menus.push({
+					menu : menusEls[i],
+					constrain : menusEls[i].parentNode.querySelector('.content'),
+					offsets : {
+						top : "5px",
+						bottom : "5px"
+					}
+				});
+			}
+
+			var floatMenu = new FloatingMenu({
+				//container: document.getElementsByTagName('body')[0],
+				menus: menus
+			});
+
+		</script>
+	</body>
 </html>
