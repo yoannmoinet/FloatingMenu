@@ -134,15 +134,14 @@
 				menus.push({
 					menu : menusEls[i],
 					constrain : menusEls[i].parentNode.querySelector('.content'),
-					offsets : {
-						top : "5px",
-						bottom : "5px"
+					offset : {
+						top : 5,
+						bottom : 5
 					}
 				});
 			}
 
 			var floatMenu = new FloatingMenu({
-				//container: document.getElementsByTagName('body')[0],
 				menus: menus
 			});
 

@@ -11,7 +11,7 @@
 		winRect = {
 			size : getSize(),
 			top : getScrollTop(),
-			dif : 0,
+			dif : getScrollTop(),
 			dir : 0
 		};
 
@@ -35,32 +35,28 @@
 		};
 
 		self.updateAll = function () {
-			var all = fp.get('all');
 			var scrollTop = getScrollTop();
-			var oldTop = winRect.top;
-			winRect.dif = winRect.top - scrollTop;
-			winRect.dir = winRect.dif / parseInt( winRect.dif, 10 );
-			winRect.top = scrollTop;
 
-			//console.log(parseInt(all[1].constrainRect.top), parseInt(all[1].constrainRect.bottom));
-			if(oldTop !== winRect.top)
+			if( winRect.top !== scrollTop ){
+				var all = fp.get('all');
+
+				winRect.dif = winRect.top - scrollTop;
+				winRect.dir = winRect.dif / Math.abs( winRect.dif ) * -1;
+				winRect.top = scrollTop;
 				for(var i = 0, max = all.length; i < max; i += 1) {
 					all[i].update();
 				}
+			}
 		};
 
 		//If we have options, we instanciate our floaters.
 		if(options !== undefined){
-			/*if(options.container !== undefined)
-				self.el = options.container;
-			else
-				self.el = document.getElementsByTagName('body')[0];*/
-
 			if( options.menus ){
 				for( var i = 0, max = options.menus.length; i < max; i += 1 ) {
 					self.add({
 						el : options.menus[i].menu,
-						constrain : options.menus[i].constrain
+						constrain : options.menus[i].constrain,
+						offset : options.menus[i].offset
 					});
 				}
 			}
@@ -103,6 +99,19 @@
 		self._ind = all.length;
 		all.push(self);
 
+		//Cache old CSS
+		self.old = {};
+		self.old.position = self.el.style.position;
+		self.old.top = self.el.style.old;
+		self.old.bottom = self.el.style.bottom;
+		self.old.display = self.el.style.display;
+		self.old.width = self.el.style.width;
+		self.old.left = self.el.style.left;
+		self.old.marginLeft = self.el.style.marginLeft;
+		self.old.marginRight = self.el.style.marginRight;
+		self.old.marginTop = self.el.style.marginTop;
+		self.old.marginBottom = self.el.style.marginBottom;
+
 		//Overwrite old array.
 		self.set("all",all);
 
@@ -127,25 +136,66 @@
 		self.elRect = self.el.getBoundingClientRect();
 		self.constrainRect = self.constrain.getBoundingClientRect();
 
-		var shouldBeVisible = self.isActive();
+		var shouldBeFixed = self.isFixed();
 
-		console.log(self._ind, shouldBeVisible);
+		if ( shouldBeFixed && !self.fixed)
+				self.fix( shouldBeFixed, self.offset[shouldBeFixed] );
+		else if ( !shouldBeFixed && self.fixed )
+			self.unfix();
 
 		return self.elRect;
 	};
 
 
-	FloatingMenu.prototype.fix = function ( where, ditance ) {
+	FloatingMenu.prototype.fix = function ( where, distance ) {
 		var self = this;
+		var padding = getCSS( self.el, 'padding-left', true);
+		padding += getCSS( self.el, 'padding-right', true);
+
+		self.el.style.position = 'fixed';
+		self.el.style.display = 'block';
+		self.el.style.width = ( self.elRect.width - padding ) + "px";
+		self.el.style.left = self.elRect.left + "px";
+
+		//Reset margins.
+		self.el.style.marginLeft = "0px";
+		self.el.style.marginRight = "0px";
+		self.el.style.marginTop = "0px";
+		self.el.style.marginBottom = "0px";
+
+		if( distance !== undefined ) {
+			self.el.style.top = self.el.style.bottom = undefined;
+			self.el.style[where] = distance + "px";
+		}
+		self.fixed = true;
 	};
 
-	FloatingMenu.prototype.isActive = function() {
+
+	FloatingMenu.prototype.unfix = function ( where ) {
 		var self = this;
 
-		//If scroll did passed the top.
-		if( self.constrainRect.top <= 0 &&
-				self.constrainRect.bottom >= 0)
-			return true;
+		for(var i in self.old){
+			self.el.style[i] = null;
+		}
+
+		self.fixed = false;
+	};
+
+	FloatingMenu.prototype.isFixed = function() {
+		var self = this;
+
+		//If we're scrolling down.
+		if( winRect.dir )
+			//If the top is passed.
+			if( self.constrainRect.top <= self.offset.top )
+				//But the bottom has not yet reached the critical place.
+				if( self.constrainRect.bottom >= Math.min( self.elRect.height, winRect.size.h ) - self.offset.bottom )
+					//If the floater is smaller than the window.
+					if( self.elRect.height < winRect.size.h )
+						return 'top';
+					//If we're scrolling past the bottom of the bigger floater.
+					else if( self.constrainRect.top < - ( self.elRect.height - winRect.size.h + self.offset.bottom ) )
+						return 'bottom';
 
 		return false;
 	};
@@ -239,13 +289,22 @@
 	var winRect;
 	var raf, caf;
 
+	var getCSS = function ( el, property, digest ){
+		var prop = window.getComputedStyle( el, null ).getPropertyValue( property );
+		if( digest === true )
+			prop = +prop.replace(/px|em/g, '');
+		return prop;
+	};
+
 	//Scroll polyfill.
-	var getScrollTop = (function (){
+	var getScrollTop = /*(function (){
 		if ( document.documentElement.scrollTop !== undefined )
 			return function () { return document.documentElement.scrollTop; };
-		else if ( document.body.scrollTop !== undefined )
+		else
 			return function () { return document.body.scrollTop; };
-	})();
+	})();*/ function(){
+	return document.documentElement.scrollTop||document.body.scrollTop;
+};
 
 	//Window size polyfill.
 	var getSize = (function (){
@@ -304,4 +363,5 @@
 
 	raf = window.requestAnimationFrame;
 	caf = window.cancelAnimationFrame;
+
 })(this);
